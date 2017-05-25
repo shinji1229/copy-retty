@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: copy-retty_production
-  username: copy-retty
-  password: <%= ENV['COPY-RETTY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
