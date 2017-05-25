@@ -36,6 +36,20 @@
   <dd>has_many :restaurant_users</dd>
 </dl>
 
+## **introduction table**
+
+
+|    Column     |     Type     |             Options                    |
+|:--------------|-------------:|:--------------------------------------:|
+|     title     |    string    |                                        |
+|     body      |     text     |                                        |
+
+
+<dl>
+  <dt>Association</dt>
+  <dd>belongs_to :restaurant</dd>
+</dl>
+
 
 ## **restaurant_users table**
 
