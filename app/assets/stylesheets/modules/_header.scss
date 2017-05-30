@@ -1,5 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Meiryo','sans-serif';
+    line-height: 1.5;
+}
+
+
+
 .header {
-    background: url(/images/common/bg_header.png) repeat-x;
+    background: url(/images/retty_header.png) repeat-x;
     height: 61px;
-    font-size: 13px;
+}
+
+.header_area {
+    margin: 0 auto;
+    width: 925px;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+    padding-top: 3px;
+}
+
+.wrapper {
+    height: calc(100vh - 61px);
+    position: relative;
+    background: url(/images/bg_mypage.png);
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0,0,0,.2);
+    box-shadow: inset 0 1px 4px 0 rgba(0,0,0,.2);
+}
+
+
+#mypage_wrap {
+    width: 1000px;
+    padding-top: 30px ;
+    margin: 0 82.5px 36px;
+}
+
+#main {
+    position: relative;
+    float: left;
+    width: 750px;
+    background: #fff url(/images/bg_main.png) no-repeat;
+    box-shadow: rgba(0,0,0,.1) 0 0 5px 0;
+    height: 860px;
+}
+
+.bread_list_area {
+    position: absolute;
+    top: -39px;
+    border-bottom: 0;
+    padding: 0 5px 10px;
+    list-style: none;
+    margin-top: 15px;
+    border-bottom: 1px dotted #ccc;
+    zoom: 1;
+}
+
+#profile_area{
+}
+
+.footer {
+  height: 108px;
 }
