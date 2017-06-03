@@ -1,86 +1,40 @@
-.wrapper
-  .container#_popIn_body
-    #mypage_wrap.cfx
-      #main
-        %ul.bread_list_area
-          %li.bread_list_top
-          %li
-        #profile_area
-          %a
-          %a
-            %h1 shinji iida
-          %ul.follow_data
-            %li フォロー
-            %li フォロワー
-          %p#profile_comment
-            %a#sidebar_write_profile_button
-          %ul#user_data
-            %li
-              %a
-              %img{src: :"/images/ic_itta.png" }
-                行ったお店：
-              %span 0
-            %li
-              %a
-              %img{src: :"/images/ic_ikitai.png" }
-                行きたいお店：
-              %span 0
-          #mymenu
-            %a
-            %img{src: :"/images/bt_itta_ikitai.png" }
-            %a
-            %img{src: :"/images/bt_edit.png" }
-            %a
-            %img{src: :"/images/bt_draft.png" }
-          #retty_ranking
-            %a
-            %img{src: :"/images/bt_ranking.png" }
-        #contents_area
-          #reaction_area
-            #lastweek_reaction.reaction
-            #weekly_reaction.reaction
-          #latest_posts
-            %h2
-              %img{src: :"/images/ic_my_post.png" }
-                あなたの投稿
-            .post
-            %p.more
-              %a
-              %img{src: :"/images/ic_arrow.png" }
-                もっと読む
-          #gone_notice
-            %h2
-              %img{src: :"/images/ic_notice.png" }
-                最近参考になった通知
-            %ul
-              %li 最近参考になった通知はありません
-            %p.more もっと読む
-          #latest_comments
-            %h2
-              %img{src: :"/images/ic_comment.png" }
-                最近のコメント
-            %ul
-              %li 最近のコメントはありません
-            %p.more もっと読む
-          #new_follower
-            %h2
-              新しいフォロワー
-            %ul
-              %li 最近のフォロワーがいません
-      #aside
-        #iine_ranking
-          %h2
-            %img{src: :"/images/ic_iine_ranking.png" }
-              いいねをもらった数
-          %ul
-            %li いいねをもらっていません
-        #ikitai_ranking
-          %h2
-            %img{src: :"/images/ic_ikitai_ranking.png" }
-              いいねをもらった数
-          %ul
-            %li 行きたいをもらっていません
-      %p.go_top
-        %strong
-
-.footer
+%header.retty-header
+  .retty-header__logo
+    %h1
+      %span Retty
+  .retty-header__menu
+    %ul
+      %li Retty(レッティ)とは
+      %li サイトマップ
+      %li まとめ
+      %li 食材
+      %li 飲み物
+      %li キーワード
+      %li 取材お申し込み
+      %li アカウントをお持ちのかたは
+.top-header
+  .top-header__container
+    .top-header__lead-main
+      %p
+    .top-header__lead-sub
+      %p Rettyはグルメなあの人のおすすめからレストランを探せる新しいグルメサービス。
+    .top-header__login
+      / %a{ href: :}
+      %p 新規登録・ログイン
+    .top-header__nav
+.top-middle
+.top-footer
+%footer.retty-footer
+  .retty-footer__container
+    %ul
+      %li Rettyグルメ
+      %li 運営会社
+      %li 利用規約
+      %li プライバシーポリシー
+      %li 脆弱性のご連絡
+      %li 取材のお申し込み
+      %li 店舗様問い合わせ
+    %ul
+      %li 全国おすすめ口コミ
+      %li 期間別口コミ一覧
+      %p Copyright (C) Retty, Inc. All Rights Reserved.
