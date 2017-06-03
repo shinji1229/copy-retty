@@ -1,0 +1,100 @@
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+#profile_area h1, #profile_area ul#follow_data, #profile_area p.profile_comment {
+    padding-left: 70px;
+}
+
+#profile_area ul#follow_data, #footmark li, #new_follower li, #mybest10 li {
+    line-height: 1.3;
+}
+
+#profile_area ul#follow_data li, #profile_comment, #latest_comments .comment, #footmark li, #new_follower li, #ranking li a {
+    font-size: 90%;
+}
+
+#profile_area {
+    position: relative;
+    float: left;
+    width: 230px;
+    padding: 20px 41px 20px 20px;
+    margin-top: 4px;
+    background: url(/images/bg_profile.png) repeat-y;
+    background-position: 270px;
+
+    h1 {
+    padding-left: 70px;
+    color: #aa6401;
+    font-size: 120%;
+    }
+
+    li{
+    color: #aa6401;
+    }
+
+    #my_icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 5px solid #f8f6f2;
+    object-fit: cover;
+    }
+
+    &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 270px;
+    content: url(/images/bg_profile_top.png);
+    }
+    &:after {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 270px;
+    content: url(/images/bg_profile_bottom.png);
+    }
+}
+
+#profile_comment {
+    margin-bottom: 15px;
+    padding: 20px 0 25px;
+    background: url(/images/bg_profile_comment.png) no-repeat;
+    background-position: bottom;
+    clear: both;
+}
+
+
+
+#sidebar_write_profile_button {
+    display: block;
+    background: transparent url(/images/side_link_account.png) no-repeat 0 0;
+    background-size: 100% 200%;
+    height: 49px;
+}
+
+#user_data{
+    background: #fff;
+    margin-top: 10px;
+    border: 3px solid #eee;
+    padding: 10px 10px 3px;
+    margin-bottom: 20px;
+}
+
+#mymenu{
+    border-top: 1px solid #e8e3d9;
+    margin: 0;
+}
+
+#retty_ranking{
+  margin-top: 20px;
+}
