@@ -1,0 +1,8 @@
+#contents_area
+  %h1 お店を投稿
+  / = form_for [@restaurant,@message] do |f|
+  /   = f.text_field :body, placeholder: "type a message"
+  /   = f.label :image do
+  /     = f.file_field :image, style: "display:none;"
+  /     %i.fa.fa-picture-o
+  /   = f.submit "Send"
