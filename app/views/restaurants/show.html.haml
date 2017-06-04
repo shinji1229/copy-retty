@@ -1,11 +1,34 @@
 = render 'layouts/header'
-#wrap_container
-  .container
-    #wrapper
+.wrapper
+  .container#_popIn_body
+    #mypage_wrap.cfx
       .overview
         .overview__titlebar
+          .table-box
+            .table-box__main
+              %h1.head_info_h1
+                %span.head_info_h1_main
+                  %span.overview_name
+                    丸亀製麺
+              %p.head_info_address
+                %span
+                  道玄坂 |
+                %span.restaurant_state
+                %span.restaurant_city
+                %span.restaurant_address
+                %span.restaurant_address
+            .table-box__add
+              %p.overview__tel 090-7475-0068
         .overview__info
-        .overview__buttons
+          .overview__info-cat
+            %span
+              .overview_tree
+          .overview__info-cat
+            %span
+              .overview_tree
+          .overview__info-cat
+            %span
+              .overview_tree
         .overview__titlebar
       .nav_bar
         %a
@@ -13,22 +36,124 @@
         %a
         %a
         %a
+      #main
+        %ul.bread_list_area
+          %li.bread_list_top
+          %li
+        #profile_area
+          %img#my_icon
+          %h1 shinji iida
+          %ul#follow_data
+            %li
+              フォロー：
+              %span
+                1
+            %li
+              フォロワー：
+              %span
+                2
+          %p#profile_comment
+            %a#sidebar_write_profile_button
+          %ul#user_data
+            %li
+              %a
+              %img{src: :"/images/ic_itta.png" }
+                行ったお店：
+              %span 0
+            %li
+              %a
+              %img{src: :"/images/ic_ikitai.png" }
+                行きたいお店：
+              %span 0
+          #mymenu
+            %a
+            %img{src: :"/images/bt_itta_ikitai.png" }
+            %a
+            %img{src: :"/images/bt_edit.png" }
+            %a
+            %img{src: :"/images/bt_draft.png" }
+          #retty_ranking
+            %a
+            %img{src: :"/images/bt_ranking.png" }
+        #contents_area
+          #reaction_area
+            #lastweek_reaction.reaction
+            #weekly_reaction.reaction
+          #latest_posts
+            %h2
+              %img{src: :"/images/ic_my_post.png" }
+                あなたの投稿
+            .post
+            %p.more
+              %a
+              %img{src: :"/images/ic_arrow.png" }
+                もっと読む
+          #gone_notice
+            %h2
+              %img{src: :"/images/ic_notice.png" }
+                最近参考になった通知
+            %ul
+              %li 最近参考になった通知はありません
+            %p.more もっと読む
+          #latest_comments
+            %h2
+              %img{src: :"/images/ic_comment.png" }
+                最近のコメント
+            %ul
+              %li 最近のコメントはありません
+            %p.more もっと読む
+          #new_follower
+            %h2
+              新しいフォロワー
+            %ul
+              %li 最近のフォロワーがいません
+      #aside
+        #iine_ranking
+          %h2
+            %img{src: :"/images/ic_iine_ranking.png" }
+              いいねをもらった数
+          %ul
+            %li いいねをもらっていません
+        #ikitai_ranking
+          %h2
+            %img{src: :"/images/ic_ikitai_ranking.png" }
+              いいねをもらった数
+          %ul
+            %li 行きたいをもらっていません
     %p.go_top
+      %a{:href => "javascript:void(0);", :onclick => "scrollToHead();"}
+        %strong ▲ ページトップへ戻る
 
 .footer
-  / .footer_inner
-  /   %ul
-  /     %li 全国おすすめ口コミ
-  /     %li 人気レストラン
-  /     %li 期間別口コミ一覧
-  /     %li ヘルプ
-  /     %li 投稿ガイドライン
-  /   %ul
-  /     %li Rettyグルメ
-  /     %li 運営会社
-  /     %li 利用規約
-  /     %li プライバシーポリシー
-  /     %li 脆弱性のご連絡
-  /     %li 取材お申し込み
-  /     %li 店舗様お問い合わせ
-  /   .copyright Copyright (C) Retty, Inc. All Rights Reserved.
+/ .wrapper
+/   .container#_popIn_body
+/     #mypage_wrap.cfx
+/       .overview
+/         .overview__titlebar
+/         .overview__info
+/         .overview__buttons
+/         .overview__titlebar
+/       .nav_bar
+/         %a
+/         %a
+/         %a
+/         %a
+/         %a
+/     %p.go_top
+/ .footer
+/   .footer_inner
+/     %ul
+/       %li 全国おすすめ口コミ
+/       %li 人気レストラン
+/       %li 期間別口コミ一覧
+/       %li ヘルプ
+/       %li 投稿ガイドライン
+/     %ul
+/       %li Rettyグルメ
+/       %li 運営会社
+/       %li 利用規約
+/       %li プライバシーポリシー
+/       %li 脆弱性のご連絡
+/       %li 取材お申し込み
+/       %li 店舗様お問い合わせ
+/     .copyright Copyright (C) Retty, Inc. All Rights Reserved.
