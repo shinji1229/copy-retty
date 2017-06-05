@@ -52,7 +52,13 @@
           #tab_a.tab-pane.active{role: :"tabpanel"}
             = render 'introduction'
           #tab_b.tab-pane{role: :"tabpanel"}
-            = render '/comments/comments'
+            .section
+              .heading.heading-type-2.clearfix
+                %h2.heading__ttl.font-lg.bold の口コミ
+                .heading__option.float-right
+                  %p.btn.btn-type-2
+                    %span 投稿する
+              = render '/comments/comment'
           #tab_c.tab-pane{role: :"tabpanel"}
             %p
               タブC!!
