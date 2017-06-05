@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :restaurants
   devise_for :users
+  devise_for :restaurants
   root 'users#show'
   resources :restaurants do
     resources :comments

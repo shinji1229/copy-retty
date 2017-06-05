@@ -63,6 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'pry-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'

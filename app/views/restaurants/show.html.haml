@@ -36,15 +36,24 @@
             %span
               .overview_tree
         .overview__titlebar
-      %ul.nav.nav-tabs
-        %li.nav-item
-          %a.nav-link.bg-primary タブ1
-        %li.nav-item
-          %a.nav-link.bg-primary タブ2
-        %li.nav-item
-          %a.nav-link.bg-primary タブ3
-        %li.nav-item
-          %a.nav-link.bg-primary タブ4
+
+      %ul.nav.nav-tabs{role: :"tablist"}
+        %li.active{role: :"presentation"}
+          %a{"aria-controls" => "tab_a", "data-toggle" => "tab", href: :"#tab_a", role: :"tab"} A
+        %li{role: :"presentation"}
+          %a{"aria-controls" => "tab_b", "data-toggle" => "tab", href: :"#tab_b", role: :"tab"} B
+        %li{role: :"presentation"}
+          %a{"aria-controls" => "tab_c", "data-toggle" => "tab", href: :"#tab_c", role: :"tab"} C
+      .tab-content
+        #tab_a.tab-pane.active{role: :"tabpanel"}
+          %p
+            タブAだよ
+        #tab_b.tab-pane{role: :"tabpanel"}
+          %p
+            タブBです
+        #tab_c.tab-pane{role: :"tabpanel"}
+          %p
+            タブC!!
       / .nav_bar
       /   %a
       /   %a
