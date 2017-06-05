@@ -36,24 +36,32 @@
             %span
               .overview_tree
         .overview__titlebar
-
-      %ul.nav.nav-tabs{role: :"tablist"}
-        %li.active{role: :"presentation"}
-          %a{"aria-controls" => "tab_a", "data-toggle" => "tab", href: :"#tab_a", role: :"tab"} A
-        %li{role: :"presentation"}
-          %a{"aria-controls" => "tab_b", "data-toggle" => "tab", href: :"#tab_b", role: :"tab"} B
-        %li{role: :"presentation"}
-          %a{"aria-controls" => "tab_c", "data-toggle" => "tab", href: :"#tab_c", role: :"tab"} C
-      .tab-content
-        #tab_a.tab-pane.active{role: :"tabpanel"}
-          %p
-            タブAだよ
-        #tab_b.tab-pane{role: :"tabpanel"}
-          %p
-            タブBです
-        #tab_c.tab-pane{role: :"tabpanel"}
-          %p
-            タブC!!
+      .nav_bar
+        %ul.nav.nav-tabs{role: :"tablist"}
+          %li.active{role: :"presentation"}
+            %a{"aria-controls" => "tab_a", "data-toggle" => "tab", href: :"#tab_a", role: :"tab"} 店舗トップ
+          %li{role: :"presentation"}
+            %a{"aria-controls" => "tab_b", "data-toggle" => "tab", href: :"#tab_b", role: :"tab"} 口コミ
+          %li{role: :"presentation"}
+            %a{"aria-controls" => "tab_c", "data-toggle" => "tab", href: :"#tab_c", role: :"tab"} 画像・写真
+          %li{role: :"presentation"}
+            %a{"aria-controls" => "tab_d", "data-toggle" => "tab", href: :"#tab_d", role: :"tab"} メニュープラン
+          %li{role: :"presentation"}
+            %a{"aria-controls" => "tab_e", "data-toggle" => "tab", href: :"#tab_e", role: :"tab"} 地図・アクセス
+        .tab-content
+          #tab_a.tab-pane.active{role: :"tabpanel"}
+            = render 'introduction'
+          #tab_b.tab-pane{role: :"tabpanel"}
+            = render '/comments/comments'
+          #tab_c.tab-pane{role: :"tabpanel"}
+            %p
+              タブC!!
+          #tab_d.tab-pane{role: :"tabpanel"}
+            %p
+              タブDです
+          #tab_e.tab-pane{role: :"tabpanel"}
+            %p
+              タブE!!
       / .nav_bar
       /   %a
       /   %a
