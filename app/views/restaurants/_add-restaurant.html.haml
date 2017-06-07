@@ -1,26 +1,15 @@
 #contents_area
-  %h1 お店を投稿
-  = form_for [@restaurant,@comment] do |f|
-    #restaurant_area_upload
-      %span.label 店名
-      %span#restaurant_name 丸亀製麺
-      = f.label :image do
-        = f.file_field :image, style: "display:none;"
-        %img.fileinput-button{src: :"/images/comment/bt_photo.png"}
+  %h1 お店を登録する
+  = form_for @restaurant do |f|
     #review_area
-      %span.label 投稿内容
-      = f.text_field :body, placeholder: "(例)新宿で皆に長年人気のお店です！濃厚なソースにジューシーなお肉。一度食べてたら病みつきになります。前菜もいろいろなメニューが出てくるので、楽しみが広がります。最後に出てくるデザートは、このお店に来たら一度は食べておきたい一品です。"
-    #score_area
-      %span.label スコア
-      %ul
-        %li#bt_score_1
-          %img{src: :"/images/comment/bt_score_1_off.png"}
-        %li#bt_score_2
-          %img{src: :"/images/comment/bt_score_2_off.png"}
-        %li#bt_score_3
-          %img{src: :"/images/comment/bt_score_3_off.png"}
-      = f.hidden_field :rate
+      %span.label 店名
+      = f.text_field :name, placeholder: "(例)Retty本店"
+    #review_area
+      %span.label 電話番号
+      = f.text_field :phonenumber, placeholder: "03-1234-5678"
+
+
     #submit_area
       = f.label :commit do
         = f.submit "Send"
-        %img#submit_area_button{src: :"/images/comment/bt_submit.png"}
+        %img#submit_area_button{src: :"/images/restaurant/bt_restaurant_button.jpg"}
