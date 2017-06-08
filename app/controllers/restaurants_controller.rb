@@ -12,4 +12,7 @@ class RestaurantsController < ApplicationController
   def create
   end
 
+  def search
+  end
+
 end

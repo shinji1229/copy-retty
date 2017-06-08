@@ -1,0 +1,50 @@
+= render 'layouts/header'
+.wrapper
+  .container#_popIn_body
+    #mypage_wrap.cfx
+      #main
+        %ul.bread_list_area
+          %li.bread_list_top
+          %li
+        #profile_area
+          %img#my_icon
+          %h1 shinji iida
+          %ul#follow_data
+            %li
+              フォロー：
+              %span
+                1
+            %li
+              フォロワー：
+              %span
+                2
+          %p#profile_comment
+            %a#sidebar_write_profile_button
+          %ul#user_data
+            %li
+              %a
+              %img{src: :"/images/ic_itta.png" }
+                行ったお店：
+              %span 0
+            %li
+              %a
+              %img{src: :"/images/ic_ikitai.png" }
+                行きたいお店：
+              %span 0
+          #mymenu
+            %a
+            %img{src: :"/images/bt_itta_ikitai.png" }
+            %a
+            %img{src: :"/images/bt_edit.png" }
+            %a
+            %img{src: :"/images/bt_draft.png" }
+          #retty_ranking
+            %a
+            %img{src: :"/images/bt_ranking.png" }
+        = render 'search-form'
+
+    %p.go_top
+      %a{:href => "javascript:void(0);", :onclick => "scrollToHead();"}
+        %strong ▲ ページトップへ戻る
+
+.footer

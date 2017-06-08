@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   # }
   root 'users#show'
   resources :users, only: [:index, :show]
-  resources :restaurants do
+  resources :restaurants, only: [:index, :show] do
+    collection do
+      get 'search'
+    end
     resources :comments
   end
 end
