@@ -7,6 +7,11 @@
     #review_area
       %span.label 電話番号
       = f.text_field :phonenumber, placeholder: "03-1234-5678"
+    %form
+      %input#address{:type => "text", :value => "東京スカイツリー"}/
+      %input#button{:type => "button", :value => "地図検索"}/
+    #map-canvas
+    %script{src: :"./map.js"}
 
 
     #submit_area
