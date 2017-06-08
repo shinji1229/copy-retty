@@ -19,13 +19,14 @@
       .notify_area
         #notifications_count
       %ul#topmenu
-        %a{ href: :"/users/sign_up" }
-          %li.nav_mypage マイページ
+        %li.nav_mypage
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav_mypage'
         %li.nav_wantto お店を検索
         %li.nav_message メッセージ
         %li.nav_message イベント
         %li.nav_user 人を探す
-        %a{ href: :"/users/sign_out" }
-          %li.nav_account ログアウト
+        %li.nav_acount
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+
 
 
