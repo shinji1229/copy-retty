@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :users, through: :restautant_users
   has_many :restaurant_users
   has_many :comments
+  mount_uploader :image, UserImageUploader
 end
