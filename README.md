@@ -71,8 +71,9 @@
 
 |    Column     |     Type     |             Options                    |
 |:--------------|-------------:|:--------------------------------------:|
-|     body      |    text      |                                        |
+|     body      |    text      | null: false                            |
 |     image     |    string    |                                        |
+|     rate      |    integer   | null: false                            |
 |     user_id   |    integer   | foreign_key: true                      |
 | restaurant_id |    integer   | foreign_key: true                      |
 

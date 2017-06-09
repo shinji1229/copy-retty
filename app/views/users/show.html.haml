@@ -1,0 +1,17 @@
+= render 'layouts/header'
+.wrapper
+  .container#_popIn_body
+    #mypage_wrap.cfx
+      #main
+        %ul.bread_list_area
+          %li.bread_list_top
+          %li
+        = render 'main-left'
+        = render 'main-right'
+      = render 'aside'
+
+    %p.go_top
+      %a{:href => "javascript:void(0);", :onclick => "scrollToHead();"}
+        %strong ▲ ページトップへ戻る
+
+.footer

@@ -1,0 +1,33 @@
+#contents_area
+  %h1 お店を登録する
+  = form_for @restaurant do |f|
+    #review_area
+      %span.label 店名
+      = f.text_field :name, placeholder: "(例)Retty本店"
+    #review_area
+      %span.label 電話番号(ハイフンあり)
+      = f.text_field :phonenumber, placeholder: "(例)03-1234-5678"
+    #review_area
+      %span.label 予算(昼)
+      = f.select :budget_lunch, [ ["営業時間外", 0], ["〜1000円", 1000], ["〜2000円", 2000], ["〜3000円", 3000], ["〜4000円", 4000], ["〜5000円", 5000], ["〜6000円", 6000], ["〜8000円", 8000], ["〜10000円", 10000], ["〜15000円", 15000], ["〜20000円", 20000], ["〜30000円", 30000], ["〜60000円", 60000]]
+
+    #review_area
+      %span.label 予算(夜)
+      = f.select :budget_dinner, [["営業時間外", 0], ["〜1000円", 1000], ["〜2000円", 2000], ["〜3000円", 3000], ["〜4000円", 4000], ["〜5000円", 5000], ["〜6000円", 6000], ["〜8000円", 8000], ["〜10000円", 10000], ["〜15000円", 15000], ["〜20000円", 20000], ["〜30000円", 30000], ["〜60000円", 60000]]
+
+
+    #review_area
+      %span.label 国名
+      = f.select :country, [["-----", "NULL"], ["日本", "日本"], ["中国", "中国"], ["韓国", "韓国"], ["タイ", "タイ"], ["シンガポール", "シンガポール"], ["アメリカ", "アメリカ"], ["カナダ", "カナダ"], ["オーストラリア", "オーストラリア"], ["イギリス", "イギリス"], ["フランス", "フランス"], ["イタリア", "イタリア"], ["ドバイ", "ドバイ"]]
+
+    / %form
+    /   %input#address{:type => "text", :value => "東京スカイツリー"}/
+    /   %input#button{:type => "button", :value => "地図検索"}/
+    / #map-canvas
+    / %script{src: :"./map.js"}
+
+
+    #submit_area
+      = f.label :commit do
+        = f.submit "Send"
+        %img#submit_area_button{src: :"/images/restaurant/bt_restaurant_button.jpg"}
