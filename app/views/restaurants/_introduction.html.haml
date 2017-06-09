@@ -1,0 +1,5 @@
+%frame
+  %h2.font-lg.bold.mb5
+    = @restaurant.introduction.try(:title)
+  %p.l-height-md
+    = @restaurant.introduction.try(:body)

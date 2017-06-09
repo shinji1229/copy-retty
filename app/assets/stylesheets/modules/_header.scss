@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Meiryo','sans-serif';
+    line-height: 1.5;
+    h1, h2, p, li, th, td, dt, dd, div, input, textarea {
+    font-size: 13px;
+    text-align: left;
+    list-style: none;
+    img {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    }
+}
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+/*ul {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}*/
+
+
+
+.header {
+    background: url(/images/retty_header.png) repeat-x;
+    height: 61px;
+
+    &_area {
+    margin: 0 auto;
+    width: 925px;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+    padding-top: 3px;
+
+        .tagline {
+        font-size: 80%;
+        line-height: 120%;
+        color: #eee;
+        font-weight: normal;
+        padding: 1px 5px 2px;
+        text-align: left;
+        }
+
+        #header_link {
+        position: absolute;
+        top: 3px;
+        right: 0;
+        list-style: none;
+            li {
+            float: left;
+            position: relative;
+            z-index: 50;
+            font-size: 80%;
+            line-height: 120%;
+            border-right: solid 1px #856034;
+            padding: 0 4px;
+            color: #fff;
+            }
+
+        }
+
+        #logo {
+        float: left;
+        line-height: 0;
+        font-size: 0;
+        }
+
+        .notify_area {
+        height: 42px;
+        float: left;
+        position: relative;
+
+            #notifications_count {
+            width: 30px;
+            height: 42px;
+            background: url(/images/header/header_info_ico.png) no-repeat 5px 12px;
+            cursor: pointer;
+            }
+        }
+        #topmenu {
+        float: right;
+        list-style: none;
+        font-size: 80%;
+            ul {
+            display: block;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-start: 40px;
+            }
+                li {
+                float: left;
+                position: relative;
+                z-index: 50;
+                border-right: solid 1px #d67826;
+                margin-top: 2px;
+                display: block;
+                color: #352a26;
+                padding: 12px 8px 12px;
+                font-size: 12px;
+                height: 39px;
+                box-sizing: border-box;
+                    &.nav_mypage {
+                    padding-left: 32px;
+                    background: url(/images/header/nav_mypage_ico.png) no-repeat 8px 9px;
+                    }
+
+                    &.nav_wantto {
+                    padding-left: 32px;
+                    background: url(/images/header/nav_wantto_ico.png) no-repeat 8px 9px;
+                    }
+
+                    &.nav_user {
+                    padding-right: 17px;
+                    background: url(/images/header/header_pull_arrow.png) no-repeat right 15px;
+                    }
+
+                    &.nav_account{
+                    padding-right: 17px;
+                    background: url(/images/header/header_pull_arrow.png) no-repeat right 15px;
+                    }
+                }
+        }
+    }
+
+}

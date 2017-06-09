@@ -2,8 +2,7 @@
   .header_area
     %p.tagline 実名口コミNo.1 / お店探しはグルメなあの人から
     #logo
-      %a{href: :""}
-        %img{src: :""}
+      %img{src: :"/images/header/logo.png"}
     %ul#header_link
       %li.about_retty Retty(レッティー)とは
       %li.about_retty エリア
@@ -18,11 +17,16 @@
       %li.about_retty サイトマップ
     %span.login_header
       .notify_area
-        #notification_count
+        #notifications_count
       %ul#topmenu
         %li.nav_mypage マイページ
-        %li.nav_wantto お店を検索
+        %li.nav_wantto
+          = link_to "お店を検索", search_restaurants_path
         %li.nav_message メッセージ
         %li.nav_message イベント
         %li.nav_user 人を探す
-        %li.nav_account アカウント
+        %li.nav_acount
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+
+
+

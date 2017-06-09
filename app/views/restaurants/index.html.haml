@@ -1,0 +1,33 @@
+= render 'layouts/header'
+.wrapper
+  .container#_popIn_body
+    #mypage_wrap.cfx
+      #main
+        %ul.bread_list_area
+          %li.bread_list_top
+          %li
+        = render 'users/main-left'
+        = render '/users/main-right'
+      = render '/users/aside'
+
+    %p.go_top
+      %a{:href => "javascript:void(0);", :onclick => "scrollToHead();"}
+        %strong ▲ ページトップへ戻る
+
+.footer
+  .footer_inner
+    %ul
+      %li 全国おすすめ口コミ
+      %li 人気レストラン
+      %li 期間別口コミ一覧
+      %li ヘルプ
+      %li 投稿ガイドライン
+    %ul
+      %li Rettyグルメ
+      %li 運営会社
+      %li 利用規約
+      %li プライバシーポリシー
+      %li 脆弱性のご連絡
+      %li 取材お申し込み
+      %li 店舗様お問い合わせ
+    .copyright Copyright (C) Retty, Inc. All Rights Reserved.
