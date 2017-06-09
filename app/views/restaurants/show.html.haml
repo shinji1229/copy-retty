@@ -59,10 +59,10 @@
                 %h2.heading__ttl.font-lg.bold
                   = @restaurant.name + "の口コミ"
                 .heading__option.float-right
-              - if user_signed_in?
-                =link_to new_restaurant_comment_path(@restaurant) do
-                  %p.btn.btn-type-2
-                    %span 投稿する
+                - if user_signed_in?
+                  =link_to new_restaurant_comment_path(@restaurant) do
+                    %p.btn.btn-type-2
+                      %span 投稿する
               = render partial: '/comments/comment', collection: @comments
           #tab_c.tab-pane{role: :"tabpanel"}
             %p
