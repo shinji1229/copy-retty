@@ -15,6 +15,15 @@
               %p.head_info_address
                 %span
                   = @restaurant.try(:address)
+            - if restaurant_signed_in?
+              =link_to new_restaurant_introduction_path(@restaurant) do
+                %p.btn.btn-type-2
+                  %span 紹介文を投稿する
+            / - else
+            /   =link_to new_restaurant_introduction_path(@restaurant) do
+            /     %p.btn.btn-type-2
+            /       %span 紹介文を投稿する
+
             .table-box__add
               %p.overview__tel
                 = @restaurant.try(:phonenumber)
@@ -47,11 +56,14 @@
           #tab_b.tab-pane{role: :"tabpanel"}
             .section
               .heading.heading-type-2.clearfix
-                %h2.heading__ttl.font-lg.bold の口コミ
+                %h2.heading__ttl.font-lg.bold
+                  = @restaurant.name + "の口コミ"
                 .heading__option.float-right
+              - if user_signed_in?
+                =link_to new_restaurant_comment_path(@restaurant) do
                   %p.btn.btn-type-2
                     %span 投稿する
-              = render '/comments/comment'
+              = render partial: '/comments/comment', collection: @comments
           #tab_c.tab-pane{role: :"tabpanel"}
             %p
               タブC!!
@@ -61,135 +73,3 @@
           #tab_e.tab-pane{role: :"tabpanel"}
             %p
               タブE!!
-      / .nav_bar
-      /   %a
-      /   %a
-      /   %a
-      /   %a
-      /   %a
-
-
-
-
-
-/       #main
-/         %ul.bread_list_area
-/           %li.bread_list_top
-/           %li
-/         #profile_area
-/           %img#my_icon
-/           %h1 shinji iida
-/           %ul#follow_data
-/             %li
-/               フォロー：
-/               %span
-/                 1
-/             %li
-/               フォロワー：
-/               %span
-/                 2
-/           %p#profile_comment
-/             %a#sidebar_write_profile_button
-/           %ul#user_data
-/             %li
-/               %a
-/               %img{src: :"/images/ic_itta.png" }
-/                 行ったお店：
-/               %span 0
-/             %li
-/               %a
-/               %img{src: :"/images/ic_ikitai.png" }
-/                 行きたいお店：
-/               %span 0
-/           #mymenu
-/             %a
-/             %img{src: :"/images/bt_itta_ikitai.png" }
-/             %a
-/             %img{src: :"/images/bt_edit.png" }
-/             %a
-/             %img{src: :"/images/bt_draft.png" }
-/           #retty_ranking
-/             %a
-/             %img{src: :"/images/bt_ranking.png" }
-/         #contents_area
-/           #reaction_area
-/             #lastweek_reaction.reaction
-/             #weekly_reaction.reaction
-/           #latest_posts
-/             %h2
-/               %img{src: :"/images/ic_my_post.png" }
-/                 あなたの投稿
-/             .post
-/             %p.more
-/               %a
-/               %img{src: :"/images/ic_arrow.png" }
-/                 もっと読む
-/           #gone_notice
-/             %h2
-/               %img{src: :"/images/ic_notice.png" }
-/                 最近参考になった通知
-/             %ul
-/               %li 最近参考になった通知はありません
-/             %p.more もっと読む
-/           #latest_comments
-/             %h2
-/               %img{src: :"/images/ic_comment.png" }
-/                 最近のコメント
-/             %ul
-/               %li 最近のコメントはありません
-/             %p.more もっと読む
-/           #new_follower
-/             %h2
-/               新しいフォロワー
-/             %ul
-/               %li 最近のフォロワーがいません
-/       #aside
-/         #iine_ranking
-/           %h2
-/             %img{src: :"/images/ic_iine_ranking.png" }
-/               いいねをもらった数
-/           %ul
-/             %li いいねをもらっていません
-/         #ikitai_ranking
-/           %h2
-/             %img{src: :"/images/ic_ikitai_ranking.png" }
-/               いいねをもらった数
-/           %ul
-/             %li 行きたいをもらっていません
-/     %p.go_top
-/       %a{:href => "javascript:void(0);", :onclick => "scrollToHead();"}
-/         %strong ▲ ページトップへ戻る
-
-/ .footer
-/ .wrapper
-/   .container#_popIn_body
-/     #mypage_wrap.cfx
-/       .overview
-/         .overview__titlebar
-/         .overview__info
-/         .overview__buttons
-/         .overview__titlebar
-/       .nav_bar
-/         %a
-/         %a
-/         %a
-/         %a
-/         %a
-/     %p.go_top
-/ .footer
-/   .footer_inner
-/     %ul
-/       %li 全国おすすめ口コミ
-/       %li 人気レストラン
-/       %li 期間別口コミ一覧
-/       %li ヘルプ
-/       %li 投稿ガイドライン
-/     %ul
-/       %li Rettyグルメ
-/       %li 運営会社
-/       %li 利用規約
-/       %li プライバシーポリシー
-/       %li 脆弱性のご連絡
-/       %li 取材お申し込み
-/       %li 店舗様お問い合わせ
-/     .copyright Copyright (C) Retty, Inc. All Rights Reserved.
