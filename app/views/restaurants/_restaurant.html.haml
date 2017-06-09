@@ -5,7 +5,9 @@
         %img#restaurant_icon
       .table-box__main.float-left
         %p.color-orange.bold.font-md.mt5.mb5
-          = link_to "お店を検索"
+          =link_to restaurant_path(restaurant) do
+            = restaurant.name
+
     .mt15.mb15
       %p
         １日だけだったので混んでいたが、釜揚げ美味しかった。

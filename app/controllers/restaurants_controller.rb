@@ -3,6 +3,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def new
@@ -13,6 +14,7 @@ class RestaurantsController < ApplicationController
   end
 
   def search
+    @restaurants = Restaurant.all
   end
 
 end

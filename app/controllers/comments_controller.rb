@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    @comment = current_user.comments.create(comment_params)
   end
 
   def edit
@@ -14,6 +15,11 @@ class CommentsController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+  def comment_params
+    params.require(:comment).permit(:body, :image, :rate).merge(restaurant_id: params[:restaurant_id])
   end
 
 end
