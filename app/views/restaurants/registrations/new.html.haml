@@ -5,6 +5,7 @@
       %h2 Registration
       %h5 レストラン情報の登録
       = render "devise/shared/links"
+      =link_to "ユーザーの登録はこちら", new_user_registration_path
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
