@@ -25,5 +25,9 @@
         %li.nav_message メッセージ
         %li.nav_message イベント
         %li.nav_user 人を探す
-        %li.nav_acount
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - if user_signed_in?
+          %li.nav_acount
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - if restaurant_signed_in?
+          %li.nav_acount
+            = link_to "ログアウト", destroy_restaurant_session_path, method: :delete
