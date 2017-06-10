@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :introductions
     resources :comments
   end
+  resources :entrances, only: [:index]
 end
