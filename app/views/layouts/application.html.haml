@@ -5,9 +5,16 @@
     %title CopyRetty
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = include_gon
+    = javascript_include_tag "application"
+
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
+
+
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBUqsSK6ktliDD99JmDrcCF5y8JUudEvDU&callback=googleMap.init"}
+
+
 
   %body
     = yield
