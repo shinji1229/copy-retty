@@ -1,4 +1,7 @@
 class RestaurantsController < ApplicationController
+
+  before_action :authenticate_restaurant!, except: [:search,:show]
+
   def index
   end
 
@@ -17,5 +20,13 @@ class RestaurantsController < ApplicationController
   def search
     @restaurants = Restaurant.all
   end
+
+  # def after_sign_in_path_for(resource)
+  #   restaurant_path
+  # end
+
+  # def after_sign_out_path_for(resource)
+  #   entrance_users_path
+  # end
 
 end

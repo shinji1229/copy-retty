@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   devise_for :restaurants
-  # devise_for :restaurants, controllers: {
-  #   sessions:      'restaurants/sessions',
-  #   passwords:     'restaurants/passwords',
-  #   registrations: 'restaurants/registrations'
-  # }
-  # devise_for :users, controllers: {
-  #   sessions:      'users/sessions',
-  #   passwords:     'users/passwords',
-  #   registrations: 'users/registrations'
-  # }
-  root 'users#show'
+  root 'entrances#index'
   resources :users, only: [:index, :show]
   resources :restaurants, only: [:index, :show] do
     collection do
@@ -20,4 +10,5 @@ Rails.application.routes.draw do
     resources :introductions
     resources :comments
   end
+  resources :entrances, only: [:index]
 end

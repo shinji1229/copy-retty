@@ -18,7 +18,7 @@ h1 {
       width: 186px;
       height: 44px;
       margin: 0 auto;
-      cursor: pointer;
+      margin-left: 20px;
       }
 }
 
@@ -54,4 +54,67 @@ input#comment_body{
     float: left;
     cursor: pointer;
     padding-bottom: 20px;
+}
+
+input[type="radio"]#bt_score_1 {
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    width: 61px;
+    height: 43px;
+    background: url(/images/comment/bt_score_1_off.png);
+    background-size: contain;
+
+}
+input[type="radio"]#bt_score_1:checked:before{
+    content:"";
+    position: absolute;
+    display: inline-block;
+    width: 61px;
+    height: 43px;
+    background: url(/images/comment/bt_score_1_on.png);
+    background-size: contain;
+
+}
+
+input[type="radio"]#bt_score_2 {
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    width: 61px;
+    height: 43px;
+    background: url(/images/comment/bt_score_2_off.png);
+    background-size: contain;
+
+}
+input[type="radio"]#bt_score_2:checked:before{
+    content:"";
+    position: absolute;
+    display: inline-block;
+    width: 61px;
+    height: 43px;
+    background: url(/images/comment/bt_score_2_on.png);
+    background-size: contain;
+
+}
+
+input[type="radio"]#bt_score_3 {
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    width: 61px;
+    height: 43px;
+    background: url(/images/comment/bt_score_3_off.png);
+    background-size: contain;
+
+}
+input[type="radio"]#bt_score_3:checked:before{
+    content:"";
+    position: absolute;
+    display: inline-block;
+    width: 61px;
+    height: 43px;
+    background: url(/images/comment/bt_score_3_on.png);
+    background-size: contain;
+
 }
