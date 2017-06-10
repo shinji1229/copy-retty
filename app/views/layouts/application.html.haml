@@ -4,9 +4,15 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title CopyRetty
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    / %script{src: :"https://maps.googleapis.com/maps/api/js?key==AIzaSyANsPn6svTM8wxSVMHBTDHc_1iSvtchtw8"}
+    = javascript_include_tag "application", 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track': 'reload'
+
+
+
+
+    %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBUqsSK6ktliDD99JmDrcCF5y8JUudEvDU&callback=googleMap.init"}
+
+
 
   %body
     = yield
