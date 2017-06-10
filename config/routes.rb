@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   devise_for :restaurants
-  root 'users#entrance'
+  root 'entrances#index'
   resources :users, only: [:index, :show]
   resources :restaurants, only: [:index, :show] do
     collection do
