@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   #   registrations: 'users/registrations'
   # }
   root 'users#show'
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    collection do
+      get 'entrance'
+    end
+  end
   resources :restaurants, only: [:index, :show] do
     collection do
       get 'search'
