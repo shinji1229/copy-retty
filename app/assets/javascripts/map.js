@@ -2,7 +2,7 @@ var googleMap = {
   init: function() {
     var self = this;
     var geocoder = new google.maps.Geocoder();
-    var address = '東京都目黒区下目黒';
+    var address = $('.restaurant_address').val();;
     self.geocode(geocoder, address);
   },
   geocode: function(geocoder, address) {
