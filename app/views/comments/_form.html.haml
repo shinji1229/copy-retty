@@ -12,15 +12,10 @@
       = f.text_field :body, placeholder: "(例)新宿で皆に長年人気のお店です！濃厚なソースにジューシーなお肉。一度食べてたら病みつきになります。前菜もいろいろなメニューが出てくるので、楽しみが広がります。最後に出てくるデザートは、このお店に来たら一度は食べておきたい一品です。"
     #score_area
       %span.label スコア
-      %ul
-        %li#bt_score_1
-          %img{src: :"/images/comment/bt_score_1_off.png"}
-        %li#bt_score_2
-          %img{src: :"/images/comment/bt_score_2_off.png"}
-        %li#bt_score_3
-          %img{src: :"/images/comment/bt_score_3_off.png"}
-      = f.hidden_field :rate
+      = f.radio_button :rate, 1, {id: "bt_score_1"}
+      = f.radio_button :rate, 2, {id: "bt_score_2"}
+      = f.radio_button :rate, 3, {id: "bt_score_3"}
     #submit_area
       = f.label :commit do
-        = f.submit "Send"
+        = f.submit "Send" , style: "display:none;"
         %img#submit_area_button{src: :"/images/comment/bt_submit.png"}
