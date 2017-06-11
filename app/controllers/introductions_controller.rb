@@ -5,7 +5,7 @@ class IntroductionsController < ApplicationController
   end
 
   def create
-    # @introduction = current_user.comments.create(comment_params)
+    @introduction = current_user.comments.new(introduction_params)
   end
 
   def edit
