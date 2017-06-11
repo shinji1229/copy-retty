@@ -1,5 +1,5 @@
 #profile_area
-  %img#my_icon
+  %img#my_icon{src: "#{current_user.try(:image).url || "noimg_140_140.png"}"}
   %h1
     = current_user.name
   %ul#follow_data
