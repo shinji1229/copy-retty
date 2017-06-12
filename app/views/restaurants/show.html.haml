@@ -35,55 +35,45 @@
         .overview__titlebar
       .nav_bar
         %ul.tab
-          %li.select 店舗トップ
-          %li 口コミ
-          %li 画像・写真
-          %li メニュープラン
-          %li 地図・アクセス
+          %li.restaurant_top
+            %img{src: :"/images/restaurant/home.png"}
+            店舗トップ
+          %li.comment_list
+            %img{src: :"/images/restaurant/comment.png"}
+            口コミ(#{@comments.count})
+          %li.picture_list
+            %img{src: :"/images/restaurant/camera.png"}
+            画像・写真(#{@comments.select("image").count})
+          %li.menu_list
+            %img{src: :"/images/restaurant/book.png"}
+            メニュープラン
+          %li.access.select
+            %img{src: :"/images/restaurant/map.png"}
+            地図・アクセス
 
         %ul.content
+          %li.secret
+            = render 'introduction'
+          %li.secret
+            .heading.heading-type-2.clearfix
+              %h2.heading__ttl.font-lg.bold
+                = @restaurant.name + "の口コミ"
+              .heading__option
+              - if user_signed_in?
+                =link_to new_restaurant_comment_path(@restaurant) do
+                  %p.btn.btn-type-2.float-right
+                    %span 投稿する
+            = render partial: '/comments/comment', collection: @comments
+          %li.secret
+            %p
+              タブC!!
+          %li.secret
+            %p
+              タブDです
           %li
-          %li.hide
-          %li.hide
-          %li.hide
-          %li.hide
-
-
-        / %ul.nav.nav-tabs{role: :"tablist"}
-        /   %li.active{role: :"presentation"}
-        /     %a{"aria-controls" => "tab_a", "data-toggle" => "tab", href: :"#tab_a", role: :"tab"} 店舗トップ
-        /   %li{role: :"presentation"}
-        /     %a{"aria-controls" => "tab_b", "data-toggle" => "tab", href: :"#tab_b", role: :"tab"} 口コミ
-        /   %li{role: :"presentation"}
-        /     %a{"aria-controls" => "tab_c", "data-toggle" => "tab", href: :"#tab_c", role: :"tab"} 画像・写真
-        /   %li{role: :"presentation"}
-        /     %a{"aria-controls" => "tab_d", "data-toggle" => "tab", href: :"#tab_d", role: :"tab"} メニュープラン
-        /   %li{role: :"presentation"}
-        /     %a{"aria-controls" => "tab_e", "data-toggle" => "tab", href: :"#tab_e", role: :"tab"} 地図・アクセス
-        / .tab-content
-        /   #tab_a.tab-pane.active{role: :"tabpanel"}
-        /     = render 'introduction'
-        /   #tab_b.tab-pane{role: :"tabpanel"}
-        /     .section
-        /       .heading.heading-type-2.clearfix
-        /         %h2.heading__ttl.font-lg.bold
-        /           = @restaurant.name + "の口コミ"
-        /         .heading__option
-        /         - if user_signed_in?
-        /           =link_to new_restaurant_comment_path(@restaurant) do
-        /             %p.btn.btn-type-2.float-right
-        /               %span 投稿する
-        /       = render partial: '/comments/comment', collection: @comments
-        /   #tab_c.tab-pane{role: :"tabpanel"}
-        /     %p
-        /       タブC!!
-        /   #tab_d.tab-pane{role: :"tabpanel"}
-        /     %p
-        /       タブDです
-        /   #tab_e.tab-pane{role: :"tabpanel"}
-        /     %p
-        /       地図だよ
-        /     #map{:style => "width:640px; height:500px"}
+            %p
+              地図だよ
+            #map{:style => "width:640px; height:500px"}
 
 %input{name: "restaurant_address", type: "hidden", value: @restaurant.address, class: 'restaurant_address' }
 
