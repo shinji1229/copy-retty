@@ -13,6 +13,8 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @comment = Comment.find(params[:id])
   end
 
   def update
