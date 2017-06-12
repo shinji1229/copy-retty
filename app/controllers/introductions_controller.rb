@@ -5,7 +5,9 @@ class IntroductionsController < ApplicationController
   end
 
   def create
-    @introduction = current_user.comments.new(introduction_params)
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @introduction = Introduction.create(introduction_params)
+    redirect_to restaurant_path(@restaurant)
   end
 
   def edit
@@ -15,5 +17,10 @@ class IntroductionsController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+  def introduction_params
+    params.require(:introduction).permit(:body, :title).merge(restaurant_id: params[:restaurant_id])
   end
 end
