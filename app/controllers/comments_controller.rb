@@ -20,7 +20,13 @@ class CommentsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    comment = Comment.find(params[:id])
+    if comment.user_id == current_user.id
+      comment.destroy
+    end
+    redirect_to restaurant_path(@restaurant)
   end
 
   private

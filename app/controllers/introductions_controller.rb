@@ -19,9 +19,6 @@ class IntroductionsController < ApplicationController
     @introduction = Introduction.update(introduction_params)
   end
 
-  def delete
-  end
-
   private
   def introduction_params
     params.require(:introduction).permit(:body, :title).merge(restaurant_id: params[:restaurant_id])

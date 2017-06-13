@@ -2,14 +2,13 @@
   .frame.frame-type-1
     .table-box.clearfix
       .table-box__sub.float-left
-        .table-box__sub-with_score
-          %img#comment_icon{src: "#{comment.user.try(:image).url || :"/images/noimg_140_140.png" }"}
-          - if comment.rate == 3
-            %img.rating{src: :"/images/comment/retty_love.png"}
-          - elsif comment.rate == 2
-            %img.rating{src: :"/images/comment/retty_smile.png"}
-          - else
-            %img.rating{src: :"/images/comment/retty_sad.png"}
+        %img#comment_icon{src: "#{comment.user.try(:image).url || :"/images/noimg_140_140.png" }"}
+        - if comment.rate == 3
+          %img.rating{src: :"/images/comment/retty_love.png"}
+        - elsif comment.rate == 2
+          %img.rating{src: :"/images/comment/retty_smile.png"}
+        - else
+          %img.rating{src: :"/images/comment/retty_sad.png"}
       .table-box__main.float-left
         %p.color-orange.bold.font-md.mt5.mb5
           = comment.user.name
@@ -21,4 +20,9 @@
     .mt15.mb15
       %p
         = comment.body
+
     %img.list.list-horiz{src: "#{comment.image.url}"}
+    - if comment.user_id == current_user.id
+      =link_to restaurant_comment_path(@restaurant,comment), method: :delete do
+        %p.btn.btn-type-2.float-right
+          %span 口コミを削除する
