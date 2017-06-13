@@ -11,9 +11,12 @@ class IntroductionsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @introduction = Introduction.new
   end
 
   def update
+    @introduction = Introduction.update(introduction_params)
   end
 
   def delete
