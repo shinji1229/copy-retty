@@ -2,7 +2,7 @@
   .frame.frame-type-1
     .table-box.clearfix
       .table-box__sub.float-left
-        %img#restaurant_icon
+        %img#restaurant_icon{src: "#{restaurant.introduction.try(:image).try(:url) || :"/images/noimg_140_140.png" }"}
       .table-box__main.float-left
         %p.color-orange.bold.font-md.mt5.mb5
           =link_to restaurant_path(restaurant), 'data-turbolinks': false do
