@@ -9,13 +9,16 @@
               %h1.head_info_h1
                 %span.head_info_h1_main
                   %span.head_info_name_additional
-                    まるがめせいめん
+                    = @restaurant.try(:kana)
                   %span.overview_name
                     = @restaurant.name
               %p.head_info_address
                 %span
                   = @restaurant.try(:address)
             - if restaurant_signed_in?
+              =link_to edit_restaurant_registration_path(@restaurant) do
+                %p.btn.btn-type-2
+                  %span 登録情報を編集する
               =link_to new_restaurant_introduction_path(@restaurant) do
                 %p.btn.btn-type-2
                   %span 紹介文を投稿する

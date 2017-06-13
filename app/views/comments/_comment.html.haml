@@ -3,7 +3,7 @@
     .table-box.clearfix
       .table-box__sub.float-left
         .table-box__sub-with_score
-          %img#comment_icon{src: "#{current_user.try(:image).url || :"/images/noimg_140_140.png" }"}
+          %img#comment_icon{src: "#{comment.user.try(:image).url || :"/images/noimg_140_140.png" }"}
           - if comment.rate == 3
             %img.rating{src: :"/images/comment/retty_love.png"}
           - elsif comment.rate == 2
