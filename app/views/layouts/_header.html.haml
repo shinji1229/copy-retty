@@ -19,11 +19,14 @@
       .notify_area
         #notifications_count
       %ul#topmenu
-        %li.nav_mypage マイページ
         - if user_signed_in?
+          %li.nav_mypage
+            = link_to "マイページ", user_path(current_user)
           %li.nav_wantto
             = link_to "お店を検索", search_restaurants_path
         - if restaurant_signed_in?
+          %li.nav_mypage
+            = link_to "マイページ", restaurant_path(@restaurant)
           %li.nav_wantto お店を検索
         %li.nav_message メッセージ
         %li.nav_message イベント
