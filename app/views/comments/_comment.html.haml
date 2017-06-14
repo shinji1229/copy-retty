@@ -22,7 +22,7 @@
         = comment.body
 
     %img.list.list-horiz{src: "#{comment.image.url}"}
-    - if comment.user_id == current_user.id
+    - if comment.user_id == current_user.try(:id)
       =link_to restaurant_comment_path(@restaurant,comment), method: :delete do
         %p.btn.btn-type-2.float-right
           %span 口コミを削除する

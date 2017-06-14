@@ -19,15 +19,17 @@ h1 {
       height: 44px;
       margin: 0 auto;
       margin-left: 20px;
+      background-image: url("/images/comment/bt_submit.png");
       }
 }
 
-input#comment_body{
+#comment_body{
     width: 96%;
     padding: 2%;
     min-height: 200px;
-    text-align: start;
 }
+
+
 
  #restaurant_area_upload {
     padding-bottom: 25px;

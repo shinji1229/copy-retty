@@ -74,13 +74,11 @@
             = render partial: '/comments/comment', collection: @comments
           %li.secret
             %p
-              タブC!!
           %li.secret
             %p
-              タブDです
           %li
             %p
-              地図だよ
+              = @restaurant.address
             #map{:style => "width:640px; height:500px"}
 
 %input{name: "restaurant_address", type: "hidden", value: @restaurant.address, class: 'restaurant_address' }
