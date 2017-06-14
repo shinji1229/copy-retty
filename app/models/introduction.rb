@@ -1,4 +1,5 @@
 class Introduction < ApplicationRecord
-  validates :body, presence: true
+
   belongs_to :restaurant
+  mount_uploader :image, RestaurantsImageUploader
 end
