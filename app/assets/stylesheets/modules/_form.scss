@@ -23,11 +23,18 @@ h1 {
       }
 }
 
-#comment_body{
+#comment_body, #introduction_body {
     width: 96%;
     padding: 2%;
     min-height: 200px;
 }
+
+#introduction_title {
+    width: 96%;
+    padding: 2%;
+    min-height: 70px;
+}
+
 
 
 
@@ -50,6 +57,7 @@ h1 {
     width: 136px;
     height: 40px;
     background-size: contain;
+    margin-left: 150px;
 }
 
  #score_area ul li {

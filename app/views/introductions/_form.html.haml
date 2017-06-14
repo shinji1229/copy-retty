@@ -10,13 +10,12 @@
         %img.fileinput-button{src: :"/images/comment/bt_photo.png"}
     #review_area
       %span.label タイトル
-      = f.text_field :title, placeholder: "(例)早い、安い、うまいの三拍子が揃う人気のうどん店"
+      = f.text_area :title, placeholder: "(例)早い、安い、うまいの三拍子が揃う人気のうどん店"
 
     #review_area
       %span.label 内容
-      = f.text_field :body, placeholder: "(例)渋谷駅より徒歩5分のうどんチェーン店「丸亀製麺 渋谷道玄坂店」。便利な場所でリーズナブルに食事がとれる人気店。提供するのは讃岐うどんなので、麺は太くコシがあり、もちもちとした食感。つゆも出汁が効いていて美味しい。"
+      = f.text_area :body, placeholder: "(例)渋谷駅より徒歩5分のうどんチェーン店「丸亀製麺 渋谷道玄坂店」。便利な場所でリーズナブルに食事がとれる人気店。提供するのは讃岐うどんなので、麺は太くコシがあり、もちもちとした食感。つゆも出汁が効いていて美味しい。"
 
     #submit_area
       = f.label :commit do
-        = f.submit "Send"
-        %img#submit_area_button{src: :"/images/comment/bt_submit.png"}
+        = f.submit " ", id: "submit_area_button"
