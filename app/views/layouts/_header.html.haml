@@ -20,8 +20,11 @@
         #notifications_count
       %ul#topmenu
         %li.nav_mypage マイページ
-        %li.nav_wantto
-          = link_to "お店を検索", search_restaurants_path
+        - if user_signed_in?
+          %li.nav_wantto
+            = link_to "お店を検索", search_restaurants_path
+        - if restaurant_signed_in?
+          %li.nav_wantto お店を検索
         %li.nav_message メッセージ
         %li.nav_message イベント
         %li.nav_user 人を探す
