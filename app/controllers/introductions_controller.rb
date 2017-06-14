@@ -21,6 +21,6 @@ class IntroductionsController < ApplicationController
 
   private
   def introduction_params
-    params.require(:introduction).permit(:body, :title).merge(restaurant_id: params[:restaurant_id])
+    params.require(:introduction).permit(:body, :title, :image).merge(restaurant_id: params[:restaurant_id])
   end
 end
