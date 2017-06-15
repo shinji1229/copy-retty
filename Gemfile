@@ -68,7 +68,5 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-<<<<<<< Updated upstream
 gem 'fog'
-=======
->>>>>>> Stashed changes
+
