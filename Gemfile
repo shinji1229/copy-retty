@@ -66,7 +66,9 @@ gem 'pry-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'
-gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+<<<<<<< Updated upstream
 gem 'fog'
+=======
+>>>>>>> Stashed changes
