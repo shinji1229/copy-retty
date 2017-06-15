@@ -16,7 +16,10 @@ class IntroductionsController < ApplicationController
   end
 
   def update
+    binding.pry
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @introduction = Introduction.update(introduction_params)
+    redirect_to restaurant_path(@restaurant)
   end
 
   private

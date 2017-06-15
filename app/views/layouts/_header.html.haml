@@ -24,7 +24,7 @@
             = link_to "マイページ", user_path(current_user)
           %li.nav_wantto
             = link_to "お店を検索", search_restaurants_path
-        - if restaurant_signed_in?
+        - elsif restaurant_signed_in?
           %li.nav_mypage
             = link_to "マイページ", restaurant_path(@restaurant)
           %li.nav_wantto お店を検索
@@ -34,6 +34,6 @@
         - if user_signed_in?
           %li.nav_acount
             = link_to "ログアウト", destroy_user_session_path, method: :delete
-        - if restaurant_signed_in?
+        - elsif restaurant_signed_in?
           %li.nav_acount
             = link_to "ログアウト", destroy_restaurant_session_path, method: :delete
