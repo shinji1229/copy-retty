@@ -17,12 +17,17 @@ var googleMap = {
     if (status === google.maps.GeocoderStatus.OK) {
       var latlng = result[0].geometry.location;
       var options = {
-        zoom: 15,
+        zoom: 17,
         center: latlng,
         mapTypeId: 'roadmap'
       };
       var map = new google.maps.Map(document.getElementById('map'), options);
-    } else {
+      var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+    }
+    else {
       alert('エラーです！');
     }
   }

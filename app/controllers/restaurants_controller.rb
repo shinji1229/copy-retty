@@ -7,7 +7,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @comments = @restaurant.comments
+    @comments = @restaurant.comments.order("created_at DESC")
   end
 
   def new
@@ -20,13 +20,5 @@ class RestaurantsController < ApplicationController
   def search
     @restaurants = Restaurant.all
   end
-
-  # def after_sign_in_path_for(resource)
-  #   restaurant_path
-  # end
-
-  # def after_sign_out_path_for(resource)
-  #   entrance_users_path
-  # end
 
 end

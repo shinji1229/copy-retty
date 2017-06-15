@@ -1,6 +1,5 @@
 class Restaurant < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  validates :phone, presence: true, format: {with: /\A[0-9-]{,14}\z/}
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :users, through: :restaurant_users

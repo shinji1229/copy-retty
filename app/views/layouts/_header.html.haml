@@ -19,15 +19,21 @@
       .notify_area
         #notifications_count
       %ul#topmenu
-        %li.nav_mypage マイページ
-        %li.nav_wantto
-          = link_to "お店を検索", search_restaurants_path
+        - if user_signed_in?
+          %li.nav_mypage
+            = link_to "マイページ", user_path(current_user)
+          %li.nav_wantto
+            = link_to "お店を検索", search_restaurants_path
+        - elsif restaurant_signed_in?
+          %li.nav_mypage
+            = link_to "マイページ", restaurant_path(@restaurant)
+          %li.nav_wantto お店を検索
         %li.nav_message メッセージ
         %li.nav_message イベント
         %li.nav_user 人を探す
         - if user_signed_in?
           %li.nav_acount
             = link_to "ログアウト", destroy_user_session_path, method: :delete
-        - if restaurant_signed_in?
+        - elsif restaurant_signed_in?
           %li.nav_acount
             = link_to "ログアウト", destroy_restaurant_session_path, method: :delete
