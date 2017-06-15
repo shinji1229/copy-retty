@@ -4,8 +4,8 @@ lock '3.8.1'
 set :application, 'copy-retty'
 set :repo_url, 'git@github.com:/shinji1229/copy-retty.git'
 
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads', 'config')
-set :linked_files, %w{config/secrets}
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :linked_files, %w{config/secrets.yml}
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
