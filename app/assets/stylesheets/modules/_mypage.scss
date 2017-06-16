@@ -21,7 +21,9 @@ padding-top: 30px;
 position: relative;
 float: left;
 width: 750px;
-background: #fff url(/images/bg_main.png) no-repeat;
+background-image: image-url("/images/bg_main.png");
+background-color: #fff;
+background-repeat: no-repeat;
 box-shadow: rgba(0,0,0,.1) 0 0 5px 0;
 
     #contents_area, #profile_area {

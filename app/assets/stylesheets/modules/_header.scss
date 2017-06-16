@@ -27,19 +27,12 @@ li {
     text-align: -webkit-match-parent;
 }
 
-/*ul {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-}*/
 
 
 
 .header {
-    background: url(/images/retty_header.png) repeat-x;
+    background-image: image-url("/images/retty_header.png");
+    background-repeat: repeat-x;
     height: 61px;
 
     &_area {
@@ -91,7 +84,9 @@ li {
             #notifications_count {
             width: 30px;
             height: 42px;
-            background: url(/images/header/header_info_ico.png) no-repeat 5px 12px;
+            background-image: image-url("/images/header/header_info_ico.png");
+            background-repeat: no-repeat;
+            background-position: 5px 12px;
             cursor: pointer;
             }
         }
@@ -121,22 +116,30 @@ li {
                 box-sizing: border-box;
                     &.nav_mypage {
                     padding-left: 32px;
-                    background: url(/images/header/nav_mypage_ico.png) no-repeat 8px 9px;
+                    background-image: image-url("/images/header/nav_mypage_ico.png");
+                    background-repeat: no-repeat;
+                    background-position: 8px 9px;
                     }
 
                     &.nav_wantto {
                     padding-left: 32px;
-                    background: url(/images/header/nav_wantto_ico.png) no-repeat 8px 9px;
+                    background-image: image-url("/images/header/nav_wantto_ico.png");
+                    background-repeat: no-repeat;
+                    background-position: 8px 9px;
                     }
 
                     &.nav_user {
                     padding-right: 17px;
-                    background: url(/images/header/header_pull_arrow.png) no-repeat right 15px;
+                    background-image: image-url("/images/header/header_pull_arrow.png");
+                    background-repeat: no-repeat;
+                    background-position: right 15px;
                     }
 
                     &.nav_account{
                     padding-right: 17px;
-                    background: url(/images/header/header_pull_arrow.png) no-repeat right 15px;
+                    background-image: image-url("/images/header/header_pull_arrow.png");
+                    background-repeat: no-repeat;
+                    background-position: right 15px;
                     }
                 }
         }
