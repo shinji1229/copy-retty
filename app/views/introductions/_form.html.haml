@@ -7,7 +7,7 @@
         = @restaurant.name
       = f.label :image do
         = f.file_field :image, style: "display:none;"
-        %img.fileinput-button{src: :"/images/comment/bt_photo.png"}
+        %img.fileinput-button{ :src => asset_path("/images/comment/bt_photo.png") }
     #review_area
       %span.label タイトル
       = f.text_area :title, placeholder: "(例)早い、安い、うまいの三拍子が揃う人気のうどん店"

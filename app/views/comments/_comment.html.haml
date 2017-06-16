@@ -4,11 +4,11 @@
       .table-box__sub.float-left
         %img#comment_icon{src: "#{comment.user.try(:image).url || :"/images/noimg_140_140.png" }"}
         - if comment.rate == 3
-          %img.rating{src: :"/images/comment/retty_love.png"}
+          %img.rating{ :src => asset_path("/images/comment/retty_love.png") }
         - elsif comment.rate == 2
-          %img.rating{src: :"/images/comment/retty_smile.png"}
+          %img.rating{ :src => asset_path("/images/comment/retty_smile.png") }
         - else
-          %img.rating{src: :"/images/comment/retty_sad.png"}
+          %img.rating{ :src => asset_path("/images/comment/retty_sad.png") }
       .table-box__main.float-left
         %p.color-orange.bold.font-md.mt5.mb5
           = comment.user.name
@@ -21,7 +21,7 @@
       %p
         = comment.body
 
-    %img.list.list-horiz{src: "#{comment.image.url}"}
+    %img.list.list-horiz{ :src => asset_path("#{comment.image.url}") }
     - if comment.user_id == current_user.try(:id)
       =link_to restaurant_comment_path(@restaurant,comment), method: :delete do
         %p.btn.btn-type-2.float-right

@@ -20,14 +20,8 @@
       %span.label 国名
       = f.select :country, [["-----", "NULL"], ["日本", "日本"], ["中国", "中国"], ["韓国", "韓国"], ["タイ", "タイ"], ["シンガポール", "シンガポール"], ["アメリカ", "アメリカ"], ["カナダ", "カナダ"], ["オーストラリア", "オーストラリア"], ["イギリス", "イギリス"], ["フランス", "フランス"], ["イタリア", "イタリア"], ["ドバイ", "ドバイ"]]
 
-    / %form
-    /   %input#address{:type => "text", :value => "東京スカイツリー"}/
-    /   %input#button{:type => "button", :value => "地図検索"}/
-    / #map-canvas
-    / %script{src: :"./map.js"}
-
 
     #submit_area
       = f.label :commit do
         = f.submit "Send"
-        %img#submit_area_button{src: :"/images/restaurant/bt_restaurant_button.jpg"}
+        %img#submit_area_button{ :src => asset_path("/images/restaurant/bt_restaurant_button.jpg") }
