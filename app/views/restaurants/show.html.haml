@@ -44,19 +44,19 @@
       .nav_bar
         %ul.tab
           %li.restaurant_top
-            %img{ :src => asset_path("/images/restaurant/home.png") }
+            %img{ :src => asset_path("restaurant/home.png") }
             店舗トップ
           %li.comment_list
-            %img{ :src => asset_path("/images/restaurant/comment.png") }
+            %img{ :src => asset_path("restaurant/comment.png") }
             口コミ(#{@comments.count})
           %li.picture_list
-            %img{ :src => asset_path("/images/restaurant/camera.png") }
+            %img{ :src => asset_path("restaurant/camera.png") }
             画像・写真(#{@comments.select("image").count})
           %li.menu_list
-            %img{ :src => asset_path("/images/restaurant/book.png") }
+            %img{ :src => asset_path("restaurant/book.png") }
             メニュープラン
           %li.access.select
-            %img{ :src => asset_path("/images/restaurant/map.png") }
+            %img{ :src => asset_path("restaurant/map.png") }
             地図・アクセス
 
         %ul.content
