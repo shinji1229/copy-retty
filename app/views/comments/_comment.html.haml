@@ -2,7 +2,7 @@
   .frame.frame-type-1
     .table-box.clearfix
       .table-box__sub.float-left
-        %img#comment_icon{src: "#{comment.user.try(:image).url || :"/images/noimg_140_140.png" }"}
+        = image_tag "#{comment.user.try(:image).url || "/assets/noimg_140_140.png" }", id: "comment_icon"
         - if comment.rate == 3
           %img.rating{ :src => asset_path("/images/comment/retty_love.png") }
         - elsif comment.rate == 2

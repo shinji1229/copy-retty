@@ -24,7 +24,7 @@
         overflow-wrap: normal;
         white-space: nowrap;
         display: block;
-        background-image: image-url("/images/index/logo.png");
+        background-image: image-url("index/logo.png");
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: 108px 39px;
@@ -53,7 +53,7 @@
 
 
 .top-header{
-  background-image: image-url("/images/index/main_pic_01.jpeg");
+  background-image: image-url("index/main_pic_01.jpeg");
   width: 100%;
   height: 418px;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@
             height: 34px;
             display: block;
             margin: 0 auto;
-            background-image: image-url("/images/index/top_title.png");
+            background-image: image-url("index/top_title.png");
             background-position: 0 0;
             background-repeat: no-repeat;
             background-size: 580px 34px;
@@ -138,7 +138,7 @@
 
 
 .top-middle{
-    background-image: image-url("/images/index/index_top_user_banner.jpg");
+    background-image: image-url("index/index_top_user_banner.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

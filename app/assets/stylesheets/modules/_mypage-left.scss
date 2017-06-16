@@ -26,7 +26,7 @@ h1 {
     width: 291px;
     padding: 20px 41px 20px 20px;
     margin-top: 4px;
-    background-image: image-url("/images/bg_profile.png");
+    background-image: image-url("/assets/bg_profile.png");
     background-repeat: repeat-y;
     background-position: 270px;
 
@@ -55,21 +55,21 @@ h1 {
     position: absolute;
     top: 0;
     left: 270px;
-    content: image-url("/images/bg_profile_top.png");
+    content: image-url("/assets/bg_profile_top.png");
     }
     &:after {
     display: block;
     position: absolute;
     bottom: -5px;
     left: 270px;
-    content: image-url("/images/bg_profile_bottom.png");
+    content: image-url("/assets/bg_profile_bottom.png");
     }
 }
 
 #profile_comment {
     margin-bottom: 15px;
     padding: 20px 0 25px;
-    background-image: image-url("/images/bg_profile_comment.png");
+    background-image: image-url("/assets/bg_profile_comment.png");
     background-repeat: no-repeat;
     background-position: bottom;
     clear: both;
@@ -79,7 +79,7 @@ h1 {
 
 #sidebar_write_profile_button {
     display: block;
-    background-image: image-url("/images/side_link_account.png");
+    background-image: image-url("/assets/side_link_account.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 0 0;

@@ -4,24 +4,24 @@
     #weekly_reaction.reaction
   #latest_posts
     %h2
-      %img{ :src => asset_path("/images/ic_my_post.png") }
-        あなたの投稿
+      = image_tag "ic_my_post.png"
+      あなたの投稿
     .post
     %p.more
       %a
-      %img{ :src => asset_path("/images/ic_arrow.png") }
-        もっと読む
+      = image_tag "ic_arrow.png"
+      もっと読む
   #gone_notice
     %h2
-      %img{ :src => asset_path("/images/ic_notice.png") }
-        最近参考になった通知
+      = image_tag "ic_notice.png"
+      最近参考になった通知
     %ul
       %li 最近参考になった通知はありません
     %p.more もっと読む
   #latest_comments
     %h2
-      %img{ :src => asset_path("/images/ic_comment.png") }
-        最近のコメント
+      = image_tag "ic_comment.png"
+      最近のコメント
     %ul
       %li 最近のコメントはありません
     %p.more もっと読む

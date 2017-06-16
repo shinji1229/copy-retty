@@ -31,7 +31,7 @@ li {
 
 
 .header {
-    background-image: image-url("/images/retty_header.png");
+    background-image: image-url("/assets/retty_header.png");
     background-repeat: repeat-x;
     height: 61px;
 
@@ -84,7 +84,7 @@ li {
             #notifications_count {
             width: 30px;
             height: 42px;
-            background-image: image-url("/images/header/header_info_ico.png");
+            background-image: url("header/header_info_ico.png");
             background-repeat: no-repeat;
             background-position: 5px 12px;
             cursor: pointer;
@@ -116,28 +116,28 @@ li {
                 box-sizing: border-box;
                     &.nav_mypage {
                     padding-left: 32px;
-                    background-image: image-url("/images/header/nav_mypage_ico.png");
+                    background-image: image-url("header/nav_mypage_ico.png");
                     background-repeat: no-repeat;
                     background-position: 8px 9px;
                     }
 
                     &.nav_wantto {
                     padding-left: 32px;
-                    background-image: image-url("/images/header/nav_wantto_ico.png");
+                    background-image: image-url("header/nav_wantto_ico.png");
                     background-repeat: no-repeat;
                     background-position: 8px 9px;
                     }
 
                     &.nav_user {
                     padding-right: 17px;
-                    background-image: image-url("/images/header/header_pull_arrow.png");
+                    background-image: image-url("header/header_pull_arrow.png");
                     background-repeat: no-repeat;
                     background-position: right 15px;
                     }
 
                     &.nav_account{
                     padding-right: 17px;
-                    background-image: image-url("/images/header/header_pull_arrow.png");
+                    background-image: image-url("header/header_pull_arrow.png");
                     background-repeat: no-repeat;
                     background-position: right 15px;
                     }
