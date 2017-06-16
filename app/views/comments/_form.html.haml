@@ -6,7 +6,7 @@
       %span#restaurant_name 丸亀製麺
       = f.label :image do
         = f.file_field :image, style: "display:none;"
-        %img.fileinput-button{src: :"/images/comment/bt_photo.png"}
+        %img.fileinput-button{ :src => asset_path("/images/comment/bt_photo.png") }
     #review_area
       %span.label 投稿内容
       = f.text_area :body, placeholder: "(例)新宿で皆に長年人気のお店です！濃厚なソースにジューシーなお肉。一度食べてたら病みつきになります。前菜もいろいろなメニューが出てくるので、楽しみが広がります。最後に出てくるデザートは、このお店に来たら一度は食べておきたい一品です。"

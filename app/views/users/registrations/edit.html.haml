@@ -20,7 +20,7 @@
             = f.label :image do
               .field-input
                 = f.file_field :image, style: "display:none;"
-                %img.fileinput-button{src: :"/images/comment/bt_photo.png"}
+                %img.fileinput-button{ :src => asset_path("/images/comment/bt_photo.png") }
         .field
           .field-label
             = f.label :email
