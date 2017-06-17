@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+// @ app/assets/javascripts/application.js
+//= require moment
+//= require fullcalendar/lang/ja
