@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/lang/ja
 //= require_tree .
 //= require bootstrap-sprockets
-// @ app/assets/javascripts/application.js
-//= require moment
-//= require fullcalendar/lang/ja
