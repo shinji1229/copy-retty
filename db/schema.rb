@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612091548) do
+ActiveRecord::Schema.define(version: 20170617101335) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "body",          limit: 65535
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170612091548) do
     t.integer  "rate"
     t.index ["restaurant_id"], name: "index_comments_on_restaurant_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.datetime "start"
+    t.datetime "end"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end
 
   create_table "introductions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -88,6 +98,7 @@ ActiveRecord::Schema.define(version: 20170612091548) do
 
   add_foreign_key "comments", "restaurants"
   add_foreign_key "comments", "users"
+  add_foreign_key "events", "users"
   add_foreign_key "introductions", "restaurants"
   add_foreign_key "restaurant_users", "restaurants"
   add_foreign_key "restaurant_users", "users"
