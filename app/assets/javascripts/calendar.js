@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
       contentHeight: 500,
-      lang: 'ja'
+      lang: 'ja',
       navLinks: true,
       selectable: true,
       selectHelper: true,

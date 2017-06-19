@@ -18,7 +18,6 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.new(event_params)
-    binding.pry
     if @event.save
       redirect_to user_path(current_user)
     end

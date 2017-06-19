@@ -1,0 +1,14 @@
+#contents_area
+  %h1 予定を追加
+  = form_for [@user,@event] do |f|
+    #review_area
+      %span.label 店名
+      = f.text_field :title
+    #score_area
+      %span.label 開始時刻
+      = raw sprintf(f.datetime_select( :start, use_month_numbers: true, date_separator: '%s', time_separator: '%s'),'年','月','日','時') + '分'
+    #score_area
+      %span.label 終了時刻
+      = raw sprintf(f.datetime_select( :end, use_month_numbers: true, date_separator: '%s', time_separator: '%s'),'年','月','日','時') + '分'
+    #submit_area
+      = f.submit "予定を追加", class: 'btn'

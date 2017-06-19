@@ -1,19 +1,16 @@
-.account-page__inner--right.user-form
-  = form_for [@user,@event] do |f|
-    .field
-      .field-label
-        = f.label :店名
-      .field-input
-        = f.text_field :title, autofocus: true
-    .field
-      .field-label
-        = f.label :開始時刻
-      .field-input
-      = raw sprintf(f.datetime_select( :start, use_month_numbers: true, date_separator: '%s', time_separator: '%s'),'年','月','日','時') + '分'
-    .field
-      .field-label
-        = f.label :終了時刻
-      .field-input
-      = raw sprintf(f.datetime_select( :end, use_month_numbers: true, date_separator: '%s', time_separator: '%s'),'年','月','日','時') + '分'
-    .actions
-      = f.submit "予定を追加", class: 'btn'
+= render 'layouts/header'
+.wrapper
+  .container#_popIn_body
+    #mypage_wrap.cfx
+      #main
+        %ul.bread_list_area
+          %li.bread_list_top
+          %li
+        = render 'users/main-left'
+        = render 'form'
+
+    %p.go_top
+      %a{:href => "javascript:void(0);", :onclick => "scrollToHead();"}
+        %strong ▲ ページトップへ戻る
+
+.footer
