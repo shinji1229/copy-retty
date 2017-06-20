@@ -4,11 +4,11 @@
       .table-box__sub.float-left
         = image_tag "#{comment.user.try(:image).url || "/assets/noimg_140_140.png" }", id: "comment_icon"
         - if comment.rate == 3
-          %img.rating{ :src => asset_path("/images/comment/retty_love.png") }
+          %img.rating{ :src => asset_path("comment/retty_love.png") }
         - elsif comment.rate == 2
-          %img.rating{ :src => asset_path("/images/comment/retty_smile.png") }
+          %img.rating{ :src => asset_path("comment/retty_smile.png") }
         - else
-          %img.rating{ :src => asset_path("/images/comment/retty_sad.png") }
+          %img.rating{ :src => asset_path("comment/retty_sad.png") }
       .table-box__main.float-left
         %p.color-orange.bold.font-md.mt5.mb5
           = comment.user.name
