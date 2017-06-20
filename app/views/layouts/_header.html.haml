@@ -26,7 +26,7 @@
             = link_to "お店を検索", search_restaurants_path
         - elsif restaurant_signed_in?
           %li.nav_mypage
-            = link_to "マイページ", restaurant_path(@restaurant)
+            = link_to "マイページ", restaurant_path(@restaurant), 'data-turbolinks': false
           %li.nav_wantto お店を検索
         %li.nav_message メッセージ
         %li.nav_message イベント
