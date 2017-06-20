@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :entrances, only: [:index]
-  get 'events', to: 'event#events'
+  get 'events', to: 'events#events'
 end

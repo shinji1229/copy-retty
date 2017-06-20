@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def events
-      @event = Event.all
+      @event = current_user.events.all
       respond_to do |format|
         format.json {
           render json:
