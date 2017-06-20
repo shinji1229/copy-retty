@@ -16,7 +16,7 @@
         %span.black-sm
           投稿:
         %span
-          = comment.created_at
+          = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
     .mt15.mb15
       %p
         = comment.body
