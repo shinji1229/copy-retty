@@ -29,9 +29,9 @@ if(window.location.href.match(/\/restaurants\/\d+/))
             map: map
           });
       }
-      else {
-        alert('エラーです！');
-      }
+      // else {
+      //   alert('エラーです！');
+      // }
     }
   }
 

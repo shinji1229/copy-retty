@@ -1,5 +1,5 @@
 #profile_area
-  = image_tag "#{current_user.try(:image).url || "/assets/noimg_140_140.png" }", id: "my_icon"
+  = image_tag "#{current_user.try(:image).try(:url) || "/assets/noimg_140_140.png" }", id: "my_icon"
   %h1
     = current_user.name
   %ul#follow_data

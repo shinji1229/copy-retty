@@ -7,7 +7,7 @@
           %li.bread_list_top
           %li
         #profile_area
-          %img#my_icon
+          = image_tag "#{current_restaurant.try(:image).try(:url) || "/assets/noimg_140_140.png" }", id: "my_icon"
           %h1
             = @restaurant.name
           %ul#follow_data
@@ -20,24 +20,24 @@
           %ul#user_data
             %li
               %a
-              %img{ :src => asset_path("/images/ic_itta.png") }
+              %img{ :src => asset_path("ic_itta.png") }
                 行ったお店：
               %span 0
             %li
               %a
-              %img{ :src => asset_path("/images/ic_ikitai.png") }
+              %img{ :src => asset_path("ic_ikitai.png") }
                 行きたいお店：
               %span 0
           #mymenu
             %a
-            %img{ :src => asset_path("/images/bt_itta_ikitai.png") }
+            %img{ :src => asset_path("bt_itta_ikitai.png") }
             %a
-            %img{ :src => asset_path("/images/bt_edit.png") }
+            %img{ :src => asset_path("bt_edit.png") }
             %a
-            %img{ :src => asset_path("/images/bt_draft.png") }
+            %img{ :src => asset_path("bt_draft.png") }
           #retty_ranking
             %a
-            %img{ :src => asset_path("images/bt_ranking.png") }
+            %img{ :src => asset_path("bt_ranking.png") }
         = render 'form'
 
     %p.go_top
