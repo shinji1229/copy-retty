@@ -30,3 +30,8 @@
       新しいフォロワー
     %ul
       %li 最近のフォロワーがいません
+  #ikitai_calendar
+    %h2
+      = current_user.name + "さんの行きたいカレンダー"
+    #calendar
+  = link_to '予定を追加' ,new_user_event_path(current_user)
