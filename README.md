@@ -12,9 +12,8 @@
 
 <dl>
   <dt>Association</dt>
-  <dd>has_many :restaurants, through: :restaurant_users</dd>
+  <dd>has_many :events</dd>
   <dd>has_many :comments</dd>
-  <dd>has_many :restaurant_users</dd>
 </dl>
 
 
@@ -44,7 +43,7 @@
 |     title     |    string    |                                        |
 |     body      |     text     |                                        |
 |     image     |    string    |                                        |
-|     image     |    string    |                                        |
+| restaurant_id |    integer   | foreign_key: true                      |
 
 <dl>
   <dt>Association</dt>
@@ -71,3 +70,21 @@
   <dd>belongs_to :user</dd>
   <dd>belongs_to :restaurant</dd>
 </dl>
+
+## **events table**
+
+
+|    Column     |     Type     |             Options                    |
+|:--------------|-------------:|:--------------------------------------:|
+|     title     |    string    |                                        |
+|     start     |    datetime  |                                        |
+|     end       |    datetime  |                                        |
+|     user_id   |    integer   | foreign_key: true                      |
+
+<dl>
+  <dt>Association</dt>
+  <dd>belongs_to :user</dd>
+</dl>
+
+
+
